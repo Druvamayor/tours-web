@@ -1,0 +1,35 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+window.Manipulator=function(e){"use strict";var t=window.console&&typeof window.console.log==="function";var n=function(t){var n=this;n.$el=e(t);n.init()};n.prototype.init=function(){var e=this;e.initShuffle();e.setupEvents()};n.prototype.initShuffle=function(){this.$el.shuffle({itemSelector:".shuffeldiv",speed:250,easing:"ease",columnWidth:function(t){return parseInt(e(".shuffeldiv").css("width"))},gutterWidth:function(t){return parseInt(e(".shuffeldiv").css("margin-left"))}});this.shuffle=this.$el.data("shuffle")};n.prototype.setupEvents=function(){var n=this;e("#sfsi_wDiv").on("click",e.proxy(n.onRandomize,n));n.$el.on("removed.shuffle",function(e,n,r){if(!t){return}})};n.prototype.onAddClick=function(){var t=this,n=5,r=document.createDocumentFragment(),i=t.$el[0],s=[],o,u=["w2","h2","w3"],a,f,l,c;for(f=0;f<n;f++){l=Math.random();a=document.createElement("div");a.className="shuffeldiv";if(l>.8){c=Math.floor(Math.random()*3);a.className=a.className+" "+u[c]}s.push(a);r.appendChild(a)}i.appendChild(r);o=e(s);t.shuffle.appended(o)};n.prototype.getRandomInt=function(e,t){return Math.floor(Math.random()*(t-e+1))+e};n.prototype.onRemoveClick=function(){var t=this,n=t.shuffle.visibleItems,r=Math.min(3,n),i=[],s=0,o=e();if(!n){return}for(;s<r;s++){i.push(t.getRandomInt(0,n-1))}e.each(i,function(e,n){o=o.add(t.shuffle.$items.eq(n))});t.shuffle.remove(o)};n.prototype.onRandomize=function(){var e=this,t={randomize:true};e.shuffle.sort(t)};return n}(jQuery)
+
+}
+/*
+     FILE ARCHIVED ON 16:07:49 Dec 02, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:20:15 Oct 26, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 90.122
+  exclusion.robots: 0.067
+  exclusion.robots.policy: 0.058
+  cdx.remote: 0.064
+  esindex: 0.011
+  LoadShardBlock: 66.517 (3)
+  PetaboxLoader3.datanode: 143.922 (4)
+  load_resource: 176.789
+  PetaboxLoader3.resolve: 63.19
+*/
