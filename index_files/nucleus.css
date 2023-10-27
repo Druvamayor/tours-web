@@ -145,6 +145,12 @@ svg {
   max-width: 100%;
 }
 
+.elementor-social-icons-wrapper a 
+svg {
+  color: #ffffff;
+  margin: auto;
+}
+
 svg:not(:root) {
   overflow: hidden;
 }
